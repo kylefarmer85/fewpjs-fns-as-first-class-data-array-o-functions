@@ -31,17 +31,17 @@ function unleashDog(dogName, dogBreed) {
 
 let routine = [wakeDog, leashDog, walkToPark, throwFrisbee, walkHome, unleashDog]
 
-// function exerciseDog(dogName, dogBreed) {
-//   let result = []
-//   for (i = 0; i < routine.length; i++) {
-//     result.push(routine[i](dogName, dogBreed))
-//   }
-//   return result
-// }
-
-function exerciseDog(dog, breed) {
-  return routine.map(fn => fn(dog, breed))
+function exerciseDog(dogName, dogBreed) {
+  let result = []
+  for (let i = 0; i < routine.length; i++) {
+    result.push(routine[i](dogName, dogBreed))
+  }
+  return result
 }
+
+// function exerciseDog(dog, breed) {
+//   return routine.map(fn => fn(dog, breed))
+// }
 
 
 exerciseDog("bob", "mutt")
